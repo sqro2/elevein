@@ -1,5 +1,6 @@
 {
   "name": "elevein",
+  "preferGlobal": true,
   "version": "1.0.0",
   "description": "Front-End developer's assistant",
   "main": "controller.js",
