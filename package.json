@@ -1,0 +1,23 @@
+{
+  "name": "elevein",
+  "version": "1.0.0",
+  "description": "Front-End developer's assistant",
+  "main": "controller.js",
+  "dependencies": {
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sqro2/elevein.git"
+  },
+  "author": "Akshay Bordoloi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sqro2/elevein/issues"
+  },
+  "homepage": "https://github.com/sqro2/elevein#readme"
+}
