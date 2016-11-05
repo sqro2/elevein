@@ -1,10 +1,11 @@
+var path = require('path');
+var parse_tree = require(path.join(__dirname,'parse_tree.js'));
 var parser = {
 	 init : function(argv){
 	 	     var t_stream = this.to_tokens(this.preprocessor(argv));
 	 	     
 						     if(this.is_valid(t_stream)){
 				                this.struc_data(t_stream);
-				                console.log(this.parse_tree);
 						     }else{
 						     	this.emit('error','0');
 						     }
@@ -19,6 +20,7 @@ var parser = {
 							    case 'project'   :
 							    case 'angular'   :
 							    case 'jquery'    :
+							    case 'frigate'   :
 							    case 'bootstrap' :
 							    case 'sass'      :
 							    case 'less'      :
@@ -42,19 +44,18 @@ var parser = {
 	 	          var body = t_array[1];
 	 	          switch(head){
 	 	          	    case 'build project' :
-				 	          	 this.parse_tree['index'] = 'build';
-				 	          	 this.parse_tree['var'] = body;
+				 	          	 parse_tree['index'] = 'build';
+				 	          	 parse_tree['var'] = body;
 				 	          	 break;
 				 	    default :
-				 	          	 this.parse_tree['index'] = 'null';
-				 	          	 this.parse_tree['var'] = 'null';
+				 	          	 parse_tree['index'] = 'null';
+				 	          	 parse_tree['var'] = 'null';
 				 	          	 break;
 
 
 	 	                   }
 		                   
 		 },
-	 parse_tree : {},
 	 preprocessor : function(str){
 	 	            var count =  0;
 		 	            while(count<2){
