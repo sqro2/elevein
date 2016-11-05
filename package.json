@@ -5,6 +5,7 @@
   "description": "Front-End developer's assistant",
   "main": "controller.js",
   "dependencies": {
+    "app-root-dir": "^1.0.2",
     "path": "^0.12.7"
   },
   "devDependencies": {},
@@ -14,6 +15,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sqro2/elevein.git"
+  },
+  "bin": {
+    "e": "controller.js"
   },
   "author": "Akshay Bordoloi",
   "license": "MIT",
